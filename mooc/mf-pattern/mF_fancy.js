@@ -1,4 +1,4 @@
-/*
+﻿/*
 * fancy v1.0
 * Date 2012.5.8
 * Author koen_lee
