@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <style>
+        #cal {
+            padding: 10px;
+            width: 300px;
+            height: 310px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+
+        #scr {
+            width: 280px;
+            height: 40px;
+            line-height: 40px;
+            background-color: white;
+            margin: 5px auto;
+            padding-right: 5px;
+            text-align: right;
+            font-weight: bold;
+            font-size: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0px 15px 5px #888888;
+        }
+
+        .key {
+            margin: 10px auto;
+            overflow: hidden;
+        }
+
+        .clear,
+        .num,
+        .sym,
+        .equ {
+            font-size: 15px;
+            width: 63px;
+            height: 30px;
+            line-height: 30px;
+            margin: 5px;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .clear {
+            clear: both;
+            float: right;
+            background-color: #rgb(85.85.85);
+        }
+
+        .num {
+            float: left;
+            background: linear-gradient(mediumblue, darkblue);
+        }
+
+        .sym {
+            float: left;
+            background: linear-gradient(chocolate, saddlebrown);
+        }
+
+        .equ {
+            clear: both;
+            margin: 0px auto;
+            position: absolute;
+            top: 285px;
+            left: 135px;
+            background-color: #FFBB00;
+        }
+
+        #a {
+            overflow: hidden;
+        }
+
+        #hid {
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cal">
+        <div id="scr">0</div>
+        <div id="key">
+            <div id="a">
+                <div class="clear" onclick="clear1()">清屏</div>
+            </div>
+            <div class="num" value="7" onclick="show(7)">7</div>
+            <div class="num" value="8" onclick="show(8)">8</div>
+            <div class="num" value="9" onclick="show(9)">9</div>
+            <div class="sym" value="*" onclick="show('*')">*</div>
+            <div class="num" value="4" onclick="show(4)">4</div>
+            <div class="num" value="5" onclick="show(5)">5</div>
+            <div class="num" value="6" onclick="show(6)">6</div>
+            <div class="sym" value="-" onclick="show('-')">-</div>
+            <div class="num" value="1" onclick="show(1)">1</div>
+            <div class="num" value="2" onclick="show(2)">2</div>
+            <div class="num" value="3" onclick="show(3)">3</div>
+            <div class="sym" value="+" onclick="show('+')">+</div>
+            <div class="num" value="0" onclick="show(0)">0</div>
+            <div class="sym" value="（" onclick="show('(')">(</div>
+            <div class="sym" value="）" onclick="show(')')">)</div>
+            <div class="sym" value="/" onclick="show('/')">/</div>
+            <div class="equ" value="=" onclick="cal()">=</div>
+        </div>
+    </div>
+    <script>
+        var src = document.getElementById("scr");
+        var flag = 0;
+
+        function clear1() {
+            src.innerHTML = "0";
+        }
+
+        function show(num) {
+            if (src.innerHTML != "0") {
+                if (flag == 1) {
+                    if (num == "+" || num == "-" || num == "*" || num == "/") {
+                        src.innerHTML += num;
+                    } else {
+                        src.innerHTML = num;
+                    }
+                    flag=0;
+                } else {
+                    src.innerHTML += num;
+                }
+            } else {
+                if (num == "+" || num == "-" || num == "*" || num == "/") {
+                    src.innerHTML += num;
+                } else {
+                    src.innerHTML = num;
+                }
+            }
+        }
+
+        function cal() {
+            var src = document.getElementById("scr");
+            if (src.innerHTML != "0") {
+                var result = eval(src.innerHTML);
+                src.innerHTML = result;
+                flag = 1;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
