@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>慕课网</title>
+    <script src="myfocus-2.0.1.min.js" type="text/javascript"></script>
+    <script src="mf-pattern/mF_YSlider.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="mf-pattern/mF_YSlider.css">
+<script>
+  myFocus.set({
+    id:'picBox'
+  })
+</script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        body {
+            background-color: #F5F5F5
+        }
+
+        .top {
+            height: 27px;
+            width: 100%;
+            background: url(images/top_bg.jpg) repeat-x;
+        }
+
+        .context {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .context ul li {
+            float: right;
+            width: 70px;
+            line-height: 27px;
+            list-style-image: url(images/li_bg.gif);
+        }
+
+        .context a:link,
+        .context a:visited {
+            text-decoration: none;
+            color: #8E8E8E;
+        }
+
+        .context a:hover,
+        .context a:active {
+            text-decoration: none;
+            color: #900;
+        }
+
+        .wrap {
+            background-color: white;
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            height: 80px;
+            background-color: white;
+        }
+
+        .logo-left {
+            width: 200px;
+            float: left;
+        }
+
+        .logo-right {
+            width: 300px;
+            margin-top: 30px;
+            margin-right: 50px;
+            float: right;
+            height: 28px;
+            color: #8E8E8E
+        }
+
+        .logo-right img {
+            vertical-align: middle;
+            margin: 10px;
+        }
+
+        .tel {
+            font-family: inherit;
+            font-family: 16px;
+            color: #CCC;
+        }
+
+        nav {
+            height: 40px;
+        }
+
+        .nav_left {
+            width: 10px;
+            background: url(images/nav_left.jpg) no-repeat;
+
+        }
+
+        .nav_mid {
+            width: 990px;
+            background: url(images/nav_bg.jpg) repeat-x;
+        }
+
+        .nav_right {
+            width: 10px;
+            background: url(images/nav_right.jpg) no-repeat;
+        }
+
+
+        .nav_mid,
+        .nav_right {
+            float: left;
+            height: 40px;
+        }
+
+        .navigation {
+            float: left;
+            width: 680px;
+        }
+
+        .search {
+            margin-top: 5px;
+            width: 300px;
+            float: left;
+        }
+
+        .searchtext {
+            background: url(images/search.jpg) no-repeat right center;
+            padding-right: 25px;
+            height: 25px;
+            width: 190px;
+            background-color: white;
+            boder: 1px solid #FFF;
+        }
+
+        nav ul li {
+            float: left;
+            list-style-type: none;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            font-family: inherit;
+            width: 100px;
+        }
+
+        nav ul li a {
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: #FF0;
+        }
+        .ad{
+          height: 310px;
+
+        }
+        .main{
+          height:250px;
+          background-color: #FFF;
+          margin-top: 5px;
+        }
+        .news,.mid,.side{
+          float:left;
+          height:250px;
+          border:1px solid #8E8E8E;
+        }
+        .news{
+          width:250px;
+          background-color: ##9F3;
+          margin-right: 7px;
+        }
+        .mid{
+          width:410px;
+          margin-right: 7px;
+        }
+        .side{
+          width:320px;
+
+        }
+        .title{
+          height:35px;
+          border-bottom: 2px dotted #e8e8e8;
+        }
+        .title_left{
+          width:50%;
+          font-family: inherit;
+          font-size: 14px;
+          font-weight: bold;
+          color: #786F66;
+          float: left;
+          line-height: 35px;
+          padding-left: 20px;
+        }
+        .title_right{
+          width:20%;
+          float:right;
+          line-height:35px;
+          margin-right: 10px;
+        }
+         .title_right a{
+          color:#999999;
+          text-decoration: none;
+         }
+         .imgnew{
+           height:80px;
+           margin-top:10px;
+           line-height:22px;
+         }
+         .imgnew img,.course_content img{
+           float:left;
+           margin:0 10px;
+         }
+         .imgnew a,.course_content a{
+           color:#C00;
+           text-decoration: none;
+         }
+         .newslist{
+           margin-top: 20px;
+         }
+         .newslist li{
+           list-style-position: inside;
+           list-style-image: url(images/list.jpg);
+           margin:8px;
+          padding-left: 10px;
+           border-bottom: 1px dotted #CCC;
+         }
+         .newslist a:link,.newslist a:visited,.course_type a:link,.course_type a:visited{
+           text-decoration: none;
+           color:#000;
+         }
+         .newslist a:hover,.newslist a:active,.course_type a:hover,.course_type a:active{
+           text-decoration: none;
+           color:#F00;
+         }
+         .newslist span{
+           float:right;
+           color:#999;
+         }
+         .course_content{
+           margin-top:10px;
+           height:120px;
+           line-height: 22px;
+         }
+         .course_type{
+           margin-top: 10px;
+           margin-left: 20px;
+           height:37px;
+           width:372px;
+           text-align: center;
+         }
+         .course_type li{
+           list-style-type: none;
+           float:left;
+           margin: 0 15px;
+         }
+         .vedio{
+           height:180px;
+           border:1px solid #E8E8E8;
+         }
+         .vedio_content{
+
+           height:120px;
+           width:300px;
+           margin:10px 10px;
+         }
+         .vedioimg{
+           border:1px solid #E8E8E8;
+           width:300px;
+           margin:5px auto;
+
+         }
+         .footer{
+           margin-top:10px;
+           clear:both;
+           width:100%;
+           height:200px;
+           background-color: #e8e8e8
+         }
+         .footercontent{
+           padding-top:20px;
+           width:1000px;
+           text-align: center;
+           margin:0 auto;
+         }
+         .footercontent ul li{
+           list-style-type: none;
+           float:left;
+           width:200px;
+           line-height:30px;
+           background: url(images/line.png) no-repeat right center;
+         }
+         .footercontent a{
+           text-decoration: none;
+           color:#999;
+           font-size:18px;
+         }
+         .footercontent ul li ul li{
+           list-style-type: none;
+         }
+            .footercontent ul li ul li a{
+               font-size:14px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="context">
+            <ul>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">加入收藏</a></li>
+                <li><a href="#">设为主页</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="logo">
+            <div class="logo-left">
+                <img src="images/logo.jpg" alt="慕课网" />
+            </div>
+            <div class="logo-right">
+                <img src="images/tel.jpg" alt="联系电话"><span div="tel">联系电话：100-200-300
+      </div>
+    </div>
+
+<nav>
+  <div class="nav_left"></div>
+  <div class="nav_mid">
+    <div class="navigation">
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">关于课程</a></li>
+        <li><a href="#">新闻动态</a></li>
+        <li><a href="#">课程中心</a></li>
+        <li><a href="#">在线课程</a></li>
+        <li><a href="#">人才招聘</a></li>
+      </ul>
+    </div>
+  <div class="search">
+    <form action="post">
+      <input type="text" class="searchtext">
+    </form>
+  </div>
+</div>
+  <div class="nav_right"></div>
+</nav>
+
+<div class="ad" id="picBox">
+  <div class="loading"><img src="images/loading.gif" alt="图片加载中"></div>
+  <div class="pic">
+    <ul id="ads">
+      <li><img src="images/ad2.jpg" alt=""></li>
+      <li><img src="images/ad3.jpg" alt=""></li>
+      <li><img src="images/ad4.jpg" alt=""></li>
+    </ul>
+  </div>
+</div>
+
+<div class="main">
+  <div class="news">
+  <div class="title">
+    <h2 class="title_left">新闻中心</h2><span class="title_right"><a href="#">more&gt;&gt;</a></span>
+  </div>
+  <div class="imgnew">
+    <img src="images/news.jpg" alt="">
+    <h2><a href="#">晋男神喊你一起嗨</a></h2>
+    <p>活动时间：5.20-5.21<br>
+    获奖公布时间：5.25<br>
+    <a href="#">Learn More&gt;&gt;</a></p>
+  </div>
+  <div class="newslist">
+    <ul>
+      <li><span>2017.05.11</span><a href="#">【活动】说出你的故事</a></li>
+      <li><span>2017.05.11</span><a href="#">我爱钱晋钱晋爱我</a></li>
+      <li><span>2017.05.11</span><a href="#">啦啦啦啦啦啦啦啦</a></li>
+      <li><span>2017.05.11</span><a href="#">idoidoidoidoido</a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="mid">
+    <div class="title">
+      <h2 class="title_left">课程中心</h2><span class="title_right"><a href="#">more&gt;&gt;</a></span>
+    </div>
+    <div class="course_content">
+      <img src="images/css.jpg" alt=""><h2><a href="#">css圆角进化论</a></h2><p>暗示法理解为嗷嗷楼房吉安self积分撒打开<br>
+      真的哭了放假啊另外开发面积哦了我父母<br>阿斯蒂芬房间卡尔平均发生</p>
+    </div>
+    <div class="course_type">
+      <ul>
+        <li><a href="#">java课程</a></li>
+        <li><a href="#">php课程</a></li>
+        <li><a href="#">linux课程</a></li>
+        <li><a href="#">css课程</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="side">
+    <div class="vedio">
+      <div class="title">
+        <h2 class="title_left">课程聚焦</h2>
+      </div>
+      <div class="vedio_content">
+        <embed src='http://player.youku.com/player.php/sid/XMjY3NDYyMTUwMA==/v.swf' allowFullScreen='true' quality='high' width='300px' height='130px' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+      </div>
+    </div>
+    <div class="vedioimg">
+      <img src="images/app.jpg" alt="">
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="footer">
+    <div class="footercontent">
+      <ul>
+        <li><a href="#">关于</a>
+          <ul>
+            <li><a href="#">品牌故事</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">加入我们</a></li>
+            <li><a href="#">版权声明</a></li>
+          </ul>
+        </li>
+        <li><a href="#">课程</a>
+          <ul>
+            <li><a href="#">PHP开发</a></li>
+            <li><a href="#">前端开发</a></li>
+            <li><a href="#">Java开发</a></li>
+            <li><a href="#">安卓开发</a></li>
+          </ul>
+        </li>
+        <li><a href="#">关注</a>
+          <ul>
+            <li><a href="#">新浪微博</a></li>
+            <li><a href="#">腾讯微博</a></li>
+            <li><a href="#">企业微信</a></li>
+            <li><a href="#">QQ空间</a></li>
+          </ul>
+        </li>
+        <li><a href="#">留言</a>
+          <ul>
+            <li><a href="#">意见反馈</a></li>
+            <li><a href="#">问题留言</a></li>
+            <li><a href="#">媒体联络</a></li>
+            <li><a href="#">在线客服</a></li>
+          </ul>
+        </li>
+        <li><img src="images/weixin.png" alt="">微信关注</a>
+          <ul>
+            <li><img src="images/qrcode.jpg" alt=""></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</body>
+</html>
