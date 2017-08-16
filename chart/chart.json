@@ -1,0 +1,108 @@
+{"year":[{
+    "time":"2016年",
+    "personcount":"5000",
+    "carcount":"7000"
+  },{
+    "time":"2017年",
+    "personcount":"7000",
+    "carcount":"6000"
+    }],
+  "month": [{
+        "time": "2016年1月",
+        "personcount":"500",
+        "carcount":"700"
+    },{
+        "time": "2016年2月",
+        "personcount":"600",
+        "carcount":"900"
+    },{
+        "time": "2016年3月",
+        "personcount":"800",
+        "carcount":"800"
+    },{
+          "time": "2016年4月",
+          "personcount":"500",
+          "carcount":"800"
+      },{
+          "time": "2016年5月",
+          "personcount":"600",
+          "carcount":"900"
+      },{
+          "time": "2016年6月",
+          "personcount":"800",
+          "carcount":"800"
+      },{
+        "time": "2017年1月",
+        "personcount":"800",
+        "carcount":"600"
+    },{
+        "time": "2017年2月",
+        "personcount":"500",
+        "carcount":"800"
+    },{
+        "time": "2017年3月",
+        "personcount":"600",
+        "carcount":"900"
+    },{
+      "time": "2017年4月",
+      "personcount":"800",
+      "carcount":"700"
+  },{
+      "time": "2017年5月",
+      "personcount":"500",
+      "carcount":"800"
+  },{
+      "time": "2017年6月",
+      "personcount":"600",
+      "carcount":"900"
+  }],
+    "day": [{
+          "time": "2017年1月1日",
+          "personcount":"50",
+          "carcount":"70"
+      },{
+          "time": "2017年1月2日",
+          "personcount":"60",
+          "carcount":"90"
+      },{
+          "time": "2017年1月3日",
+          "personcount":"80",
+          "carcount":"80"
+      },{
+          "time": "2017年1月4日",
+          "personcount":"80",
+          "carcount":"60"
+      },{
+          "time": "2017年1月5日",
+          "personcount":"50",
+          "carcount":"80"
+      },{
+          "time": "2017年1月6日",
+          "personcount":"60",
+          "carcount":"90"
+      },{
+            "time": "2017年1月7日",
+            "personcount":"50",
+            "carcount":"70"
+        },{
+            "time": "2017年1月8日",
+            "personcount":"60",
+            "carcount":"90"
+        },{
+            "time": "2017年1月9日",
+            "personcount":"80",
+            "carcount":"80"
+        },{
+            "time": "2017年1月10日",
+            "personcount":"80",
+            "carcount":"60"
+        },{
+            "time": "2017年1月11日",
+            "personcount":"50",
+            "carcount":"80"
+        },{
+            "time": "2017年1月12日",
+            "personcount":"60",
+            "carcount":"90"
+        }]
+  }
